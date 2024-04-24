@@ -1,0 +1,8 @@
+a {
+    text-decoration: none;
+    width: fit-content;
+}
+
+.active {
+    border-bottom: solid 1px slategray;
+}
