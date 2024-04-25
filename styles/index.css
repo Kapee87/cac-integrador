@@ -6,3 +6,95 @@ a {
 .active {
     border-bottom: solid 1px slategray;
 }
+
+.indexBg,
+.sociosBg {
+    width: 99vw;
+    min-height: 100vh;
+    position: absolute;
+    background-repeat: repeat;
+    background-size: auto;
+    filter: blur(5px);
+    opacity: .6;
+    z-index: -1;
+}
+
+.indexBg {
+    background: url("../assets/fondoIndex.jpg");
+}
+
+.sociosBg {
+    background: url("../assets/fondoSociosSm.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: blur(2.5px);
+}
+
+.sectionContainer {
+    display: flex;
+    padding: 5rem 2rem 0 2rem;
+    justify-content: center;
+    text-align: center;
+
+    min-height: 100vh;
+}
+
+.sectionContainer h1 i {
+    display: none;
+}
+
+/* Estilos para la clase avatar */
+.avatar {
+    width: 100px;
+    /* Ancho del avatar */
+    height: 100px;
+    /* Altura del avatar */
+    border-radius: 50%;
+    /* Hace que la imagen sea circular */
+    overflow: hidden;
+    /* Evita desbordes si la imagen es más grande */
+    border: 2px solid #007BFF;
+    /* Borde con color del club */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Sombra para darle profundidad */
+    display: inline-block;
+    /* Para permitir alineamiento en línea */
+}
+
+/* Estilos adicionales para la imagen del avatar */
+.avatar img {
+    width: 100%;
+    /* Hace que la imagen ocupe todo el contenedor */
+    height: 100%;
+    /* Hace que la imagen ocupe todo el contenedor */
+    object-fit: cover;
+    /* Asegura que la imagen se recorte si es necesario */
+}
+
+@media screen and (min-width:325px) {
+    .sectionContainer h1 i {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width:720px) {
+    .sociosBg {
+        background: url("../assets/fondoSocios.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .sectionContainer {
+        align-items: center;
+    }
+}
+
+
+@media screen and (min-width:1044px) {
+
+    .indexBg,
+    .sociosBg {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
