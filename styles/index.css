@@ -71,9 +71,44 @@ a {
     /* Asegura que la imagen se recorte si es necesario */
 }
 
+.navbar-collapse a {
+    transform: scale(1);
+    transition: transform .6s;
+}
+
+.navbar-collapse a:hover {
+    transform: scale(1.2);
+    transition: transform .6s;
+}
+
+.navbar-collapse:hover .navbar-brand img {
+    transform: rotate(360deg);
+    transition: transform 1s;
+}
+
+.navbar-brand img {
+    transform: rotate(0deg);
+    transition: transform 1s;
+}
+
+/* Estilos de sección formulario */
+
+.formContainer {
+    min-height: 100vh;
+    margin-top: 5rem;
+}
+
+.infoLink {
+    font-size: 12px;
+}
+
 @media screen and (min-width:325px) {
     .sectionContainer h1 i {
         display: inline-block;
+    }
+
+    .formContainer {
+        margin-top: 2rem;
     }
 }
 
@@ -96,5 +131,9 @@ a {
     .sociosBg {
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .formContainer {
+        margin-top: 0;
     }
 }
