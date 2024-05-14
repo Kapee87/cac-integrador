@@ -1,7 +1,9 @@
 import { getNavBar } from "./navBar.js";
-
+let user = JSON.parse(localStorage.getItem('user'))
+let sociosSection = document.getElementById('sociosSection')
 
 getNavBar('socios')
+getSociosSection(user)
 
 document.addEventListener('click', function (event) {
 
@@ -18,3 +20,38 @@ document.addEventListener('click', function (event) {
         }
     }
 });
+
+function getSociosSection(user) {
+    sociosSection.innerHTML = `
+    <div class="card mb-3 p-4" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-4 avatar">
+            <img src="${user.avatar || '../assets/bocaIcon.png'}" class="object-fit-contain" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">${user?.nombre} ${user?.apellido}</h5 >
+                <ul>
+                    <li>
+                        Número de socio: ${user.id}
+                    </li>
+                    <li>
+                        Lugar de residencia :${user.direccion}
+                    </li>
+                    <li>
+                    Correo electrónico : ${user.email}
+                    </li>
+                    <li>
+                    Teléfono : ${user.telefono}
+                    </li>
+                    <li>
+                    Fecha de Nacimiento : ${user.fechaNacimiento}
+                    </li>
+                    </>
+                    <p class="card-text"><small class="text-body-secondary">Acciones de socio?</small></p>
+            </div >
+        </div >
+    </div >
+</div >
+        `
+}
