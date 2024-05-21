@@ -37,15 +37,7 @@ a {
     display: none;
 }
 
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1040;
-}
+
 
 /* Sección socios */
 
@@ -88,6 +80,23 @@ a {
     /* Para permitir alineamiento en línea */
 }
 
+.nav-avatar {
+    width: 50px;
+    /* Ancho del avatar */
+    height: 50px;
+    /* Altura del avatar */
+    border-radius: 50%;
+    /* Hace que la imagen sea circular */
+    overflow: hidden;
+    /* Evita desbordes si la imagen es más grande */
+    border: 2px solid #007BFF;
+    /* Borde con color del club */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Sombra para darle profundidad */
+    display: inline-block;
+    /* Para permitir alineamiento en línea */
+}
+
 /* Estilos adicionales para la imagen del avatar */
 .avatar img {
     width: 100%;
@@ -98,12 +107,14 @@ a {
     /* Asegura que la imagen se recorte si es necesario */
 }
 
-.navbar-collapse a {
+.navbar-collapse a,
+.navbar-collapse button {
     transform: scale(1);
     transition: transform .6s;
 }
 
-.navbar-collapse a:hover {
+.navbar-collapse a:hover,
+.navbar-collapse button:hover {
     transform: scale(1.2);
     transition: transform .6s;
 }
@@ -142,6 +153,36 @@ a {
 
 .errorMessage {
     font-size: small;
+}
+
+/* Estilos sección Iniciar sesión */
+
+#loginForm {
+    min-height: 100vh;
+    width: 100%;
+}
+
+#loginForm,
+#loginForm ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginForm ul {
+    border: solid 1px slategray;
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px rgb(136, 139, 104);
+    flex-direction: column;
+    align-items: self-end;
+    padding: 5rem;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+#loginForm ul li input {
+    border-radius: 8px;
+    padding: .5rem;
 }
 
 @media screen and (min-width:325px) {
@@ -183,4 +224,12 @@ a {
     .formContainer {
         margin-top: 0;
     }
+}
+
+.disabledLink a {
+    color: gray;
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+
 }

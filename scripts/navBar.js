@@ -1,8 +1,9 @@
-let navDiv = document.getElementById('navbar')
-let user = JSON.parse(localStorage.getItem('user'))
 
 export function getNavBar(section) {
-    console.log(user);
+    let user = JSON.parse(localStorage.getItem('userLogged'))
+    let navDiv = document.getElementById('navbar')
+    const isLogged = !user ? false : true
+
     navDiv.innerHTML = `
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" id="navContainer">
     <div class="container-fluid">
@@ -20,21 +21,36 @@ export function getNavBar(section) {
                 <li class="nav-item">
                     <a class="nav-link ${section == 'index' ? 'active' : ''} " aria-current="page" href="/">Home</a>
                 </li>
-                <li class="nav-item ${!user ? 'd-none' : ''}">
+                <li class="nav-item  ${!isLogged ? 'disabledLink' : ''} ">
                     <a class="nav-link ${section == 'socios' ? 'active' : ''}" href="/pages/socios.html" >Socios</a>
                 </li>
-                <li class="nav-item ${!user ? 'd-none' : ''}">
+                <li class="nav-item ${!isLogged ? 'disabledLink' : ''}">
                 <a class="nav-link ${section == 'entradas' ? 'active' : ''}" href="/pages/entradas.html" >Entradas</a>
                 </li>
-                <li class="nav-item ${!user ? '' : 'd-none'}">
+                <li class="nav-item ${!isLogged ? '' : 'd-none'}">
                 <a class="nav-link ${section == 'registro' ? 'active' : ''}" href="/pages/registro.html" >Registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ${section == 'contacto' ? 'active' : ''}" href="/pages/contacto.html" >Contacto</a>
+                    <a 
+                    class="nav-link ${section == 'login' ? 'active' : ''} ${!isLogged ? '' : 'd-none'}" href="/pages/login.html" > 
+                    🔑 Iniciar sesión
+                    </a>
+                </li>
+                <li class="nav-item" >
+                    <button class="nav-link ${section == 'logout' ? 'active' : ''} ${!isLogged ? 'd-none' : ''}" id="logoutBtn"> 
+                    🚪 Cerrar sesión
+                    </button>
                 </li>
             </ul>
+            ${user?.avatar ? `
+            <div class="col-md-2 nav-avatar">
+                <img src="${user?.avatar}" class="object-fit-contain" alt="...">
+            </div>
+            `: ''}
+            
         </div>
     </div>
 </nav>
     `
 }
+

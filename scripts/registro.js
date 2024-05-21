@@ -1,9 +1,9 @@
-import createUser from "./formComponents/createUser.js";
+/* import { getNavBar } from "./navBar.js"; */
 import { validate } from "./formComponents/formValidation.js";
-import { getNavBar } from "./navBar.js";
 let FormData = document.getElementById('registerForm');
+import createUser from "./formComponents/createUser.js";
 
-getNavBar('registro')
+/* getNavBar('registro')
 
 document.addEventListener('click', function (event) {
 
@@ -18,7 +18,7 @@ document.addEventListener('click', function (event) {
             collapseInstance.hide();
         }
     }
-});
+}); */
 
 FormData.addEventListener('submit', (e) => {
     e.preventDefault();
