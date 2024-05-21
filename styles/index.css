@@ -26,15 +26,25 @@ a {
 
 .sectionContainer {
     display: flex;
-    padding: 5rem 1rem 0 1rem;
     justify-content: space-evenly;
     text-align: center;
     flex-direction: column;
     min-height: 100vh;
+    font-size: small;
 }
 
 .sectionContainer h1 i {
     display: none;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
 }
 
 /* Sección socios */
@@ -117,15 +127,32 @@ a {
 
 .infoLink {
     font-size: 12px;
+    border: none;
+    background-color: transparent;
+    transition: 1s;
+    padding: 1rem;
+}
+
+.infoLink:hover {
+    transition: 1s;
+    border-radius: 10px;
+
+    background-color: rgba(240, 248, 255, 0.288);
+}
+
+.errorMessage {
+    font-size: small;
 }
 
 @media screen and (min-width:325px) {
+
     .sectionContainer h1 i {
         display: inline-block;
     }
 
     .formContainer {
         margin-top: 2rem;
+
     }
 }
 
@@ -143,6 +170,9 @@ a {
 
 
 @media screen and (min-width:1044px) {
+    .sectionContainer {
+        font-size: large;
+    }
 
     .indexBg,
     .sociosBg {

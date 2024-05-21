@@ -1,6 +1,8 @@
 let navDiv = document.getElementById('navbar')
+let user = JSON.parse(localStorage.getItem('user'))
 
 export function getNavBar(section) {
+    console.log(user);
     navDiv.innerHTML = `
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" id="navContainer">
     <div class="container-fluid">
@@ -18,17 +20,17 @@ export function getNavBar(section) {
                 <li class="nav-item">
                     <a class="nav-link ${section == 'index' ? 'active' : ''} " aria-current="page" href="/">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ${!user ? 'd-none' : ''}">
                     <a class="nav-link ${section == 'socios' ? 'active' : ''}" href="/pages/socios.html" >Socios</a>
+                </li>
+                <li class="nav-item ${!user ? 'd-none' : ''}">
+                <a class="nav-link ${section == 'entradas' ? 'active' : ''}" href="/pages/entradas.html" >Entradas</a>
+                </li>
+                <li class="nav-item ${!user ? '' : 'd-none'}">
+                <a class="nav-link ${section == 'registro' ? 'active' : ''}" href="/pages/registro.html" >Registro</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link ${section == 'contacto' ? 'active' : ''}" href="/pages/contacto.html" >Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link ${section == 'registro' ? 'active' : ''}" href="/pages/registro.html" >Registro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link ${section == 'entradas' ? 'active' : ''}" href="/pages/entradas.html" >Entradas</a>
                 </li>
             </ul>
         </div>
