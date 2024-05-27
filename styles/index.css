@@ -185,6 +185,41 @@ a {
     padding: .5rem;
 }
 
+/* Sección entradas */
+
+.ticket {
+    border: 2px solid #0066cc;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    max-width: 80vw;
+}
+
+.ticket-header {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.ticket-body {
+    padding: 20px;
+}
+
+.ticket-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+.boca-logo {
+    width: 50px;
+    height: auto;
+}
+
 @media screen and (min-width:325px) {
 
     .sectionContainer h1 i {

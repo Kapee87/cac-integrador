@@ -27,4 +27,4 @@ const timeoutSesion = setTimeout(() => {
 const timeoutWarning = setTimeout(() => {
     let user = JSON.parse(localStorage.getItem('userLogged'))
     !user ? '' : alert('La sesión está por terminar')
-}, "24000")
+}, "240000")
