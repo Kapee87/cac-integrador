@@ -44,7 +44,7 @@ export function getNavBar(section) {
             </ul>
             ${user?.avatar ? `
             <div class="col-md-2 nav-avatar">
-                <img src="${user?.avatar}" class="object-fit-contain" alt="...">
+                <img src="${user?.avatar}" alt="...">
             </div>
             `: ''}
             

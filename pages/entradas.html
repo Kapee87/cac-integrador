@@ -14,6 +14,8 @@
 <body data-bs-theme="dark">
     <div id="navbar"></div>
 
+    <div class="entradasBg">
+    </div>
     <section class="sectionContainer" id="ticketSection">
         <div class="container">
             <div class="ticket">
@@ -24,15 +26,20 @@
                 </div>
                 <div class="ticket-body">
                     <p><strong>Fecha:</strong> 24 de Mayo, 2024 <strong> Hora:</strong> 20:00</p>
-                    <p><strong>Estadio:</strong> La Bombonera <strong> Ubicación:</strong> Sector A, Fila 12, Asiento 34
-                    </p>
-                    <p></p>
+                    <p><strong>Estadio:</strong> La Bombonera 
                     <p><strong>Nombre:</strong> Juan Pérez</p>
                     <p><strong>Número de Socio:</strong> 123456</p>
-                </div>
-                <div class="ticket-footer">
                     <p>¡Vamos Boca!</p>
                 </div>
+                <div class="ticket-footer">
+                    <div class="d-flex justify-content-center align-items-baseline gap-3">
+                        <button class="btn btn-dark disabled" id="ticketMinus">➖</button>
+                        <p id="ticketAmount">0</p>
+                        <button class="btn btn-dark" id="ticketAdd">➕</button>
+                    </div>
+                    <p class="text-danger d-none" id="ticketMax">Máxima cantidad permitida</p>
+                </div>
+                <button class="btn btn-outline-light d-block w-100 disabled" id="ticketBuy">Retirar Ticket/s</button>
             </div>
         </div>
     </section>

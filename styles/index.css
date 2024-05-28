@@ -8,7 +8,8 @@ a {
 }
 
 .indexBg,
-.sociosBg {
+.sociosBg,
+.entradasBg {
     width: 99vw;
     min-height: 100vh;
     position: absolute;
@@ -98,7 +99,8 @@ a {
 }
 
 /* Estilos adicionales para la imagen del avatar */
-.avatar img {
+.avatar img,
+.nav-avatar img {
     width: 100%;
     /* Hace que la imagen ocupe todo el contenedor */
     height: 100%;
@@ -186,6 +188,14 @@ a {
 }
 
 /* Sección entradas */
+
+.entradasBg {
+    background: url("../assets/fondoEntradas2.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    filter: blur(3px);
+}
 
 .ticket {
     border: 2px solid #0066cc;
