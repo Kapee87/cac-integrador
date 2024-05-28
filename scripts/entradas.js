@@ -86,6 +86,7 @@ ticketBuy.addEventListener('click', () => {
         // Ordenar el nuevo array por ID
         newUsersArray.sort((a, b) => a.id - b.id);
         localStorage.setItem('users', JSON.stringify(newUsersArray));
+        alert("Cantidad de tickets del socio: " + userFound.tickets)
     } else {
         alert('Cantidad máxima de entradas permitidas alcanzada');
     }

@@ -75,7 +75,7 @@ const getFields = () => {
     const email = document.getElementById("floatingEmail").value;
     const password = document.getElementById("floatingPassword").value;
     const phone = document.getElementById("floatingPhone").value;
-    const province = document.getElementById("floatingSelect").value;
+    const province = document.getElementById("floatingSelect").selectedOptions[0].text;
     const image = document.getElementById("floatingUrl").value;
     const virgin = document.getElementById("flexSwitchCheckDefault").value;
 

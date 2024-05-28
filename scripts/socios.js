@@ -41,7 +41,7 @@ function getSociosSection(user) {
                         Número de socio: ${user?.id}
                     </li>
                     <li>
-                        Lugar de residencia :${user?.direccion}
+                        Lugar de residencia : ${user?.direccion}
                     </li>
                     <li>
                     Correo electrónico : ${user?.email}
@@ -50,10 +50,10 @@ function getSociosSection(user) {
                     Teléfono : ${user?.telefono}
                     </li>
                     <li>
-                    Fecha de Nacimiento : ${user?.fechaNacimiento}
+                    Entradas reservadas : ${user?.tickets}
                     </li>
                     </>
-                    <p class="card-text"><small class="text-body-secondary">Acciones de socio?</small></p>
+                    <p class="card-text"><small class="text-body-secondary">Acciones de socio?(próximamente)</small></p>
             </div >
         </div >
     </div >
